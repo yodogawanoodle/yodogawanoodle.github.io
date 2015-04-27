@@ -17,7 +17,8 @@ block sidebar
   h2: a(href="/noodle/") 打ちたて製麺“淀川”
   nav
     ul
-      li: a(href="/noodle/menu.html") メニュー
+      li: a(href="/noodle/menu.html") 宅配メニュー
+      li: a(href="/noodle/shop.html") 店舗メニュー
       li: a(href="/order/") ご注文
       li: a(href="/noodle/family.html") ご家庭での楽しみ方
       li: a(href="/corporate/") 法人契約
@@ -54,13 +55,26 @@ block content
     p.
       製麺所は大阪市淀川区にございます。お電話を頂いてから２時間以内にお届けいたします。
     h3 宅配地域
-    ul
-      li 大阪市淀川区
-      li 大阪市東淀川区
-      li 大阪市西淀川区
-      li 大阪市北区
-      li 尼崎市
-      li 豊中市
+    table
+      thead
+        tr
+          th 注文より40分以内
+          th 注文より60分以内
+          th 注文より120分以内
+      tbody
+        tr
+          td
+            ul
+              li 大阪市淀川区
+              li 大阪市東淀川区
+              li 大阪市西淀川区
+          td
+            ul                          
+              li 大阪市北区
+          td
+            ul
+              li 尼崎市
+              li 豊中市
     h3 営業時間
     p.
       午前9時〜午後6時（最終受付は5時30分）

@@ -1,0 +1,54 @@
+extends index
+
+block title
+  title スタッフ | #{titledef}
+
+block metatitle
+  meta(name="description" content="大阪市淀川区の製麺所です。うどん・そば・ラーメン・パスタをはじめ、あらゆる麺を製造しています。大阪市淀川区、東淀川区、西淀川区、北区、豊中市、尼崎市へは、当日中の宅配が可能です。ぜひお電話でご注文ください。")
+  meta(name="keyword" content="#{metakey}")
+
+block title
+  title 宅配メニュー | #{titledef}
+block subheader
+  section#sub-header
+    .wrap
+      h1 自宅ですぐに食べられる。多彩な麺類をすぐにお届け
+
+block breadcrumb
+  nav#bc
+    ol.wrap
+      li: a(href="/") トップページ
+      li: a(href="/noodle/") 打ちたて製麺 “淀川”
+      li.current メニュー
+
+block content
+  article
+    h1 宅配メニュー
+    h2 生麺
+    h3　うどん
+    .row
+      section.col
+        h1
+          |さぬき
+          small 価格：112円/1玉
+        img(src="http://placehold.jp/210x210.png")
+        p.desc 讃岐うどん風の、歯ごたえしっかりコシを大事にしたうどん生麺
+      section.col
+        h1
+          |いなにわ
+          small 価格：380円/1玉
+        img(src="http://placehold.jp/210x210.png")
+        p.desc 秋田名物稲庭うどんを忠実に再現いたしました。
+      section.col
+        h1
+          |ふくおか
+          small 価格：200円/1玉
+        img(src="http://placehold.jp/210x210.png")
+        p.desc 福岡・博多名物のごぼ天うどんをイメージした麺です。細めで柔らかいのが特徴
+      
+  nav#related
+    h2 こちらのページもご覧ください
+    ul
+      li: a(href="#") 店舗一覧
+      li: a(href="#") ネットショッピング
+      li: a(href="#") よくある質問 

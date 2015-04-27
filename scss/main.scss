@@ -79,6 +79,18 @@ a {
   }
 }
 
+table {
+  border: 2px solid $gc;
+  border-collapse: collapse;
+  th {
+    background: lighten($gc, 45);
+  }
+  th, td {
+    border: 1px solid #ddd !important;
+    padding: 0.75em;
+  }
+}
+
 nav {
   a {
     &:hover {
