@@ -103,6 +103,7 @@ ul {
 
 #header {
   background: #fff;
+  padding-bottom: 7px;
   .wrap {
     @extend .clearfix;
   }
@@ -112,6 +113,19 @@ ul {
       width: 200px;
       height: 50px;
       border: 0;
+    }
+  }
+}
+
+#masthead {
+  background: #eee;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  margin-bottom: 15px;
+  p.desc {
+    strong {
+      color: #d30e0e;
+      font-weight: bold;
     }
   }
 }
