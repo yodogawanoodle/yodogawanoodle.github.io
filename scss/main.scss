@@ -1,0 +1,499 @@
+/* reset */
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+	overflow: visible;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+
+// .clearfix {width:100%;}
+.clearfix:after{
+    content: ""; 
+    display: block; 
+    clear: both;}
+
+$gc: #e67f10;
+
+$gnav-border-side: 1px solid darken($gc, 15);
+
+.blocky {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.row {
+  @extend .clearfix;
+  .col {
+    width: 335px;
+    float: left; 
+    margin-right: 20px;
+    &:nth-child(2n) {
+      margin-right: 0;
+    }
+  }
+}
+
+a {
+  text-decoration: none;
+  color: $gc;
+  &:hover {
+    color: darken($gc, 15);
+    text-decoration: underline;
+  }
+}
+
+.indent {
+  padding-left: 1.5em;
+}
+
+a {
+  img {
+    border: 1px solid $gc;
+  }
+  &:hover {
+    img {
+      opacity: 0.7;
+    }
+  }
+}
+
+nav {
+  a {
+    &:hover {
+      text-decoration: none;
+    }
+  }
+}
+body {
+  background: #ddd;
+}
+
+ul {
+  li {
+    list-style-type: none;
+  }
+}
+
+.wrap {
+  width: 960px;
+  margin: 0 auto;
+}
+
+#header {
+  background: #fff;
+  .wrap {
+    @extend .clearfix;
+  }
+  h1 {
+    float: left;
+    img {
+      width: 200px;
+      height: 50px;
+      border: 0;
+    }
+  }
+}
+
+#subNav {
+  float: right;
+  ul {
+    text-align: right;
+    li {
+      vertical-align: middle;
+      display: inline-block;
+      margin-right: 1.5em;
+      &:last-child {
+        margin-right: 0;
+      }
+      a {
+        font-size: 12px;
+        &:hover {
+          text-decoration: none;
+        }
+        &:before {
+          content: ">";
+          margin-right: 0.5em;
+        }
+      }
+    }
+  }
+}
+
+
+#gNav {
+  background: lighten($gc,15);
+  box-sizing: border-box;
+  border: 0;
+  .wrap {
+    display: table;
+    table-layout: fixed;
+    border-collapse: collapse;
+    ul {
+      display: table-row;
+      li {
+        display: table-cell;
+        vertical-align: middle;
+        text-align: center;
+        a {
+          background: $gc;
+          @extend .blocky;
+          padding-top: 13px;
+          padding-bottom: 14px;
+          color: #fff;
+          box-shadow: 0 -4px 0 darken($gc,15) inset;
+          border-left: $gnav-border-side;
+          &:hover {
+            background: lighten($gc, 5);
+            text-decoration: none;
+            box-shadow: 0 -4px 0 #eca822 inset;
+          }
+        }
+        &:last-child {
+          a {
+            border-right: $gnav-border-side;
+          }
+        }
+      }
+    }
+  }
+}
+
+#hero {
+  padding-top: 40px;
+  padding-bottom: 40px;
+  background: url("http://www.transparenttextures.com/patterns/az-subtle.png") top center repeat lighten($gc, 35); 
+}
+
+#bc {
+  background: #efefef;
+  ol {
+    padding-top: 5px;
+    padding-bottom: 5px;
+    li {
+      list-style-type: none;
+      display: inline-block;
+      font-size: 11px;
+      margin-top: -4px;
+      &:after {
+        content: "\00BB";
+        margin-left: 0.5em;
+      }
+      &:last-child:after {
+        content: "";
+      }
+    }
+  }
+}
+
+#main {
+  background: #fff;
+  padding-bottom: 70px;
+}
+
+#feature {
+  @extend .clearfix;
+  padding-top: 40px;
+  padding-bottom: 40px;
+  section {
+    width: 210px;
+    margin-right: 40px;
+    float: left;
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+  h1 {
+    font-size: 17px;
+    border-left: 1px $gc solid;
+    padding: 4px 0;
+    padding-left: 1em;
+    & + img {
+      margin-top: 0.5em;
+    }
+  }
+}
+
+.desc {
+  font-size: 70%;
+  color: #555;
+}
+
+#sub-content {
+  @extend .clearfix;
+}
+
+#news {
+  float: left;
+  h2 {
+    font-weight: bold;
+    color: #555;
+    padding-bottom: 0.5em;
+    border-bottom: 1px solid #ddd;
+    margin-bottom: 1em;
+    &:before {
+      content:"▼";
+      color: $gc;
+      margin-right: 0.5em;
+    }
+  }
+  width: 600px;
+  border: 3px double $gc;
+  padding: 10px;
+  li {
+    margin-bottom: 0.75em;
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+  time {
+    background: #fff;
+    color: #999;
+    border: 1px solid #ddd;
+    font-size: 11px;
+    padding: 0.25em 1.5em;
+    display: inline-block;
+    margin-right: 1em;
+  }
+}
+
+#bnrs {
+  float: right;
+  width: 300px;
+}
+
+#footer {
+  background: $gc;
+}
+
+#fNav {
+  padding-top: 15px;
+  padding-bottom: 15px;
+  ul {
+    text-align: center;
+  }
+  li {
+    display: inline-block;
+    margin-right: 1.5em;
+    a {
+      color: #fff;
+      font-size: 14px;
+    }
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+}
+
+#address {
+  background: #ddd;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  p {
+    text-align: center;
+    color: #888;
+    font-size: 11px;
+  }
+}
+
+#sub-header {
+  @extend #hero;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  h1 {
+    font-size: 17px;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    padding-left: 1em;
+    border-left: 2px $gc solid;
+  }
+}
+
+.left_sidebar {
+  #main {
+    padding-top: 50px;
+    @extend .clearfix;
+  }
+  #sb {
+    width: 230px;
+    margin: 0 20px 0 0;
+    float: left;
+  }
+  #main-content {
+    width: 690px;
+    margin: 0 0 0 20px;
+    float: right;
+  }
+}
+
+.right_sidebar {
+  #main {
+    padding-top: 50px;
+    @extend .clearfix;
+  }
+  #sb {
+    width: 230px;
+    margin: 0 0 0 20px;
+    float: right;
+  }
+  #main-content {
+    width: 690px;
+    margin: 0 20px 0 0;
+    float: left;
+  }
+}
+
+#main-content {
+  h1 {
+    font-size: 27px;
+    padding-top: 7px;
+    padding-bottom: 7px;
+    border-left: 1px solid $gc;
+    padding-left: 0.5em;
+    margin-bottom: 14px;
+  }
+  p.desc {
+    font-size: 13px;
+    background: lighten($gc, 35);
+    padding: 13px;
+  }
+  p,ul,ol,dl,table,blockquote {
+    margin: 1em 0;
+  }
+  h1,h2,h3,h4,h5,h6 {
+    margin: 2.5em 0 0.5em;
+  }
+  *>*:first-child {
+    margin-top: 0;
+  }
+  *>*:last-child {
+    margin-bottom: 0em;
+  }
+  p {
+    font-size: 14px;
+    color: #555;
+    line-height: 1.6;
+  }
+}
+
+#main-content {
+  margin-top: 3em;
+  h2 {
+    font-size: 22px;
+    color: #555;
+    padding-top: 0.75em;
+    padding-bottom: 0.75em;
+    border-left: 1px solid #777;
+    box-shadow: 2px 0 0 #ccc inset;
+    padding-left: 1em;
+    & + div {
+      margin-top: 1.5em;
+    }
+  }
+  
+  .col {
+    margin-bottom: 3em;
+    h1 {
+      font-size: 15px; 
+      text-align: left;
+    }
+    text-align: center;
+    p.desc {
+      background: transparent;
+      padding: 0;
+      color: #999;
+      text-align: left;
+    }
+  }
+}
+
+#sb {
+  border-top: 3px solid $gc;
+  h2 {
+    border-bottom: 1px dotted #ddd;
+    padding-top: 0.5em;
+    padding-bottom: 0.5em;
+    margin-bottom: 0.75em;
+    &:before {
+      content: "▼";
+      margin-right: 0.5em;
+      color: #ddd;
+    }
+  }
+  ul {
+    margin-left: 0.5em;
+    li {
+      border-left: 2px solid #eee;
+      margin-bottom: 0.5em;
+      &:hover {
+        border-left-color: $gc;
+      }
+      a {
+        padding-left: 1em;
+        padding-top: 0.5em;
+        padding-bottom: 0.5em;
+        font-size: 13px;
+        box-sizing: border-box;
+        @extend .blocky;
+        &:hover {
+          background: lighten($gc,48);
+        }
+      }
+    }
+  }
+}
+
+#related {
+  margin-top: 2.5em;
+  border: 3px double $gc;
+  padding: 1em;
+  h2 {
+    border-left: 0;
+    box-shadow: none;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 0.25em;
+    font-size: 16px;
+    padding: 0;
+    padding-bottom: 0.5em;
+    &:before {
+      content:"▼";
+      color: $gc;
+      margin-right: 0.5em;
+    }
+  }
+  li {
+    display: inline-block;
+    padding: 7px;
+    margin-right: 1.5em;
+    a {
+      font-size: 12px;
+      @extend .blocky;
+      margin-bottom: 0;
+      &:before {
+        content: "\00BB";
+        margin-right: 0.5em;
+      }
+    }
+  }
+}

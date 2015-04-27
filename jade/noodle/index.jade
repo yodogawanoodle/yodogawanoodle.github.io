@@ -1,0 +1,74 @@
+extends ../left_sidebar
+
+block title
+  title 打ちたて製麺とは | #{titledef}
+block subheader
+  section#sub-header
+    .wrap
+      h1 多彩な麺類 - 麺のお取り寄せ
+
+block breadcrumb
+  nav#bc
+    ol.wrap
+      li: a(href="/") トップページ
+      li.current 打ちたて製麺 “淀川”
+
+block sidebar
+  h2: a(href="/noodle/") 打ちたて製麺“淀川”
+  nav
+    ul
+      li: a(href="/noodle/menu.html") メニュー
+      li: a(href="/order/") ご注文
+      li: a(href="/noodle/family.html") ご家庭での楽しみ方
+      li: a(href="/corporate/") 法人契約
+
+block content
+  article
+    h1 打ちたての麺を、あなたのお宅で、今すぐに
+    p.desc
+      |株式会社D2Dでは、職人が打った、出来たての麺をすぐにあなたのお宅へお届け。お気軽にご注文ください
+    h2 取扱麺類
+    p.
+      D2Dでは和洋中それぞれの麺をお取り扱いしています。
+    .row
+      section.col
+        h1 うどん
+        img(src="http://placehold.jp/335x200.png")
+      section.col
+        h1 そば
+        img(src="http://placehold.jp/335x200.png")
+      section.col
+        h1 ラーメン
+        img(src="http://placehold.jp/335x200.png")
+      section.col
+        h1 パスタ
+        img(src="http://placehold.jp/335x200.png")
+    .row
+      section.col
+        a(href="/noodle/menu.html"): img(src="http://placehold.jp/333x100.png?text=麺種メニュー" alt="麺のメニューを見る")
+        p 各麺の詳細については、こちらからご覧ください
+      section.col
+        a(href="/order/"): img(src="http://placehold.jp/333x100.png?text=今すぐご注文" alt="今すぐご注文")
+        p ご注文はこちらから。麺についてのお問い合わせも承っています
+    h2 お届け地域・お届け時間帯
+    p.
+      製麺所は大阪市淀川区にございます。お電話を頂いてから２時間以内にお届けいたします。
+    h3 宅配地域
+    ul
+      li 大阪市淀川区
+      li 大阪市東淀川区
+      li 大阪市西淀川区
+      li 大阪市北区
+      li 尼崎市
+      li 豊中市
+    h3 営業時間
+    p.
+      午前9時〜午後6時（最終受付は5時30分）
+
+      
+  nav#related
+    h2 こちらのページもご覧ください
+    ul
+      li: a(href="#") 店舗一覧
+      li: a(href="#") ネットショッピング
+      li: a(href="#") よくある質問 

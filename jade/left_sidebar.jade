@@ -1,0 +1,48 @@
+include elements/header
+
+div#content.left_sidebar
+  block subheader
+    section#sub-header
+      .wrap
+        h1 下層ページ左サイドバー
+        
+  block breadcrumb
+    nav#bc
+      ol.wrap
+        li: a(href="/") トップページ
+        li 下層ページ左サイドバー
+        
+  #main
+    .wrap
+      #sb
+        block sidebar
+          h2: a(href="#") 左サイドバー
+          nav
+            ul
+              li: a(href="#") コンテンツ１
+              li: a(href="#") コンテンツ２
+              li: a(href="#") コンテンツ３
+              li: a(href="#") コンテンツ４
+      #main-content
+        block content
+          article
+            h1 ページタイトル
+            p.desc
+              |ページの概要が入りますよ
+            div
+              h2 小見出し１
+              p.
+                ダミーテキストが入ります　ダミーテキストが入ります　ダミーテキストが入ります　ダミーテキストが入ります　ダミーテキストが入ります　ダミーテキストが入ります　ダミーテキストが入ります　ダミーテキストが入ります　ダミーテキストが入ります　ダミーテキストが入ります　ダミーテキストが入ります
+              h3 孫見出し１
+              p.
+                ダミーテキストが入ります　ダミーテキストが入ります　ダミーテキストが入ります　ダミーテキストが入ります　ダミーテキストが入ります　ダミーテキストが入ります　ダミーテキストが入ります　ダミーテキストが入ります　ダミーテキストが入ります　ダミーテキストが入ります　ダミーテキストが入ります
+
+              
+          nav#related
+            h2 こちらのページもご覧ください
+            ul
+              li: a(href="#") 店舗一覧
+              li: a(href="#") ネットショッピング
+              li: a(href="#") よくある質問            
+
+include elements/footer
