@@ -1,40 +1,23 @@
-doctype
-- var titledef = "淀川製麺所 - 大阪市・北摂地域の打ちたて宅配製麺";
-- var metakey = "製麺, 宅配, 大阪, 淀川区, うどん, そば, ラーメン, パスタ, ネット通販";
-- var metades = "大阪市淀川区の製麺所です。うどん・そば・ラーメン・パスタをはじめ、あらゆる麺を製造しています。お電話一本で淀川区・北区・尼崎・豊中へ宅配。日本全国からもネットでご注文いただけます。";
-html
-  head
-    block title
-      title= titledef
-    block metatitle
-      meta(name="description" content="#{metades}")
-      meta(name="keyword" content="#{metakey}")
-    block metarobots
-      meta(name="robots" content="noindex,noarchive,follow")
-    block head
-      link(rel="stylesheet" href="/css/main.css")
-
-  body
-    header#header
-      #masthead
-        .wrap
-          p.desc
-            |このサイトは、Webデザインテンプレートのためのものです。
-            strong コンテンツの内容は実在しません。
-            |ご注意ください
-      div.wrap
-        h1: a(href="/"): img(src="/img/common/logo.png" width="264" height="50")
-        nav#subNav
-          ul
-            li: a(href="/privacy/") プライバシーポリシー
-            li: a(href="/contact/") お問い合わせ
-            li: a(href="/profile/") 会社概要
-            li: a(href="/factory/access.html") アクセス
-    nav#gNav
-      .wrap
-        ul
-          li: a(href="/noodle/") 打ちたて制麺“淀川”
-          li: a(href="/factory/") 製麺所
-          li: a(href="/shop/") ネットショップ
-          li: a(href="/corporate/") 法人契約
-          li: a(href="/faq/") よくある質問
+header#header
+  #masthead
+    .wrap
+      p.desc
+        |このサイトは、Webデザインテンプレートのためのものです。
+        strong コンテンツの内容は実在しません。
+        |ご注意ください
+  div.wrap
+    h1: a(href="/"): img(src="/img/common/logo.png" width="264" height="50")
+    nav#subNav
+      ul
+        li: a(href="/privacy/") プライバシーポリシー
+        li: a(href="/contact/") お問い合わせ
+        li: a(href="/profile/") 会社概要
+        li: a(href="/factory/access.html") アクセス
+nav#gNav
+  .wrap
+    ul
+      li: a(href="/noodle/") 打ちたて制麺“淀川”
+      li: a(href="/factory/") 製麺所
+      li: a(href="/shop/") ネットショップ
+      li: a(href="/corporate/") 法人契約
+      li: a(href="/faq/") よくある質問
