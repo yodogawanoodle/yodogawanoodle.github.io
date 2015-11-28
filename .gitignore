@@ -1,2 +1,4 @@
 *.[cfg]
 rawimg/
+node_modules/
+bower_components/
