@@ -1,0 +1,58 @@
+extends ../right_sidebar
+
+block title
+  title 淀川製麺所について｜#{titledef}
+
+block append head
+  link(rel="stylesheet" href="/css/factory.css")
+
+block subheader
+  section#sub-header
+    .wrap
+      h1 淀川の恵みに育まれて - 淀川製麺所
+      
+block breadcrumb
+  nav#bc
+    ol.wrap
+      li: a(href="/") トップページ
+      li.current 淀川製麺所
+      
+block sidebar
+  h2: a(href="/factory/") 淀川製麺所について
+  nav
+    ul
+      li: a(href="/factory/access.html") アクセス・営業時間
+      li: a(href="/factory/staff.html") スタッフ
+
+block content
+  article
+    h1 最高の麺を求めたら、この場所が必要でした
+    p.desc
+      |淀川製麺所では、究極の麺を求めるため、材料のみならず、その製造過程にこだわりました。21世紀の麺を生み出す最高の機材を集め、大阪市淀川区で営業しています。
+    h2 機材
+    div.row
+      section.col
+        h1 うどん製麺機 UD-1x
+        p.desc.
+          淀川製麺所がうどんにこだわって研究した、自社開発のうどん専用製麺機です
+        img(src="http://placehold.jp/240x180.png")
+      section.col
+        h1 そば製麺機 SB-1000
+        p.desc.
+          淀川製麺所がそば専用に開発した製麺機。日本中の製麺所で採用されています。
+        img(src="http://placehold.jp/240x180.png")
+      section.col
+        h1 ラーメン専用製麺機 RAAMEAAAN
+        p.desc.
+          ラーメン専用製麺機。細麺太麺縮れ麺を、自動的に製麺します。ライセンス生産機種。
+        img(src="http://placehold.jp/240x180.png")
+      section.col
+        h1 各種包丁類
+        p.desc.
+          各麺種や長さに応じて、実に70数本もの包丁を用います。
+        img(src="http://placehold.jp/240x180.png")
+  nav#related
+    h2 こちらのページもご覧ください
+    ul
+      li: a(href="/factory/access.html") 淀川製麺所について
+      li: a(href="/factory/staff.html") スタッフ

@@ -1,0 +1,84 @@
+extends index
+
+block title
+  title スタッフ | #{titledef}
+
+block metatitle
+  meta(name="description" content="大阪市淀川区の製麺所です。うどん・そば・ラーメン・パスタをはじめ、あらゆる麺を製造しています。このページでは、勤務しているスタッフのご紹介をしております。製麺所お立ち寄りの際や、宅配時にはお気軽にお声をおかけくださいませ。")
+  meta(name="keyword" content="#{metakey}")
+
+block subheader
+  section#sub-header
+    .wrap
+      h1 淀川製麺所を支える仲間たち
+
+block breadcrumb
+  nav#bc
+    ol.wrap
+      li: a(href="/") トップページ
+      li: a(href="/factory/")淀川製麺所
+      li.current スタッフ
+
+block content
+  article#staff
+    h1 スタッフのご紹介
+    h2 所長
+    .row
+      section.col
+        h1 所長： 山田太郎
+        img(src="http://placehold.jp/150x150.png")
+        p.desc.
+          淀川製麺所代表取締役社長、製造責任者。1996年より、この地で製麺業を始めてから20年。毎日三食が麺類でも嫌な顔ひとつしない、麺オタクです。
+    h2 製麺事業部
+    .row
+      section.col
+        h1 部長： 田中二郎
+        img(src="http://placehold.jp/150x150.png")
+        p.desc.
+          製麺事業部責任者。好きな麺はラーメン。得意な麺は太めの縮れ麺。長めの休暇には、ラーメン二郎を食べに東京まで遠征しています！
+      section.col
+        h1 佐藤三郎
+        img(src="http://placehold.jp/150x150.png")
+        p.desc.
+          担当は、うどんとそば。うどんをひとくち食べただけで、どの地域のうどんか当てられるのが特技。
+      section.col
+        h1 山田華子
+        img(src="http://placehold.jp/150x150.png")
+        p.desc.
+          パスタ担当。新規開発麺も担当している。目下のところ開発中なのはバジル練り込み麺。2016年製品化を目指して奮闘中！
+    h2 販売部
+    .row
+      section.col
+        h1 店長：山田陽子
+        img(src="http://placehold.jp/150x150.png")
+        p.desc.
+          製麺所ショップ担当。明るい笑顔と大きな声で元気よく接客中！
+      section.col
+        h1 村岡景子
+        img(src="http://placehold.jp/150x150.png")
+        p.desc.
+          製麺所ショップ担当。イートインコーナーの調理も担当
+    h2 配送部
+    .row
+      section.col
+        h1 マネージャー：山田洋介
+        img(src="http://placehold.jp/150x150.png")
+        p.desc.
+          お客さまのもとへ、清潔感のある笑顔でお伺いします。出来立てほやほやの麺は、私たちが責任を持ってお届けします
+      section.col
+        h1 小林淳二
+        img(src="http://placehold.jp/150x150.png")
+        p.desc.
+          近距離配達担当。淀川区、西淀川区、東淀川区を担当しております。原付で配達しますので、小回りも自在。お気軽に配達お申し付けください。
+    h2 EC事業部
+    .row
+      section.col
+        h1 林 洋子
+        img(src="http://placehold.jp/150x150.png") 
+        p.desc.
+          淀川製麺所の麺を、日本中のお客さまに味わっていただきたい。ネット通販の窓口は私が担当しております。メールでもお気軽にお問い合わせください。
+  nav#related
+    h2 こちらのページもご覧ください
+    ul
+      li: a(href="/factory/") 淀川製麺所について
+      li: a(href="/noodle/access.html") アクセス
